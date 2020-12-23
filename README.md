@@ -1,2 +1,2 @@
-# music-artist-project
+# Project about music-artist
 
