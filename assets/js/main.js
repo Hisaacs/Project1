@@ -1,4 +1,3 @@
-// $(document).ready(function() {
 
     // when document ready, hide most of the div and show some div
     $("#bandsintown, #recentSearch, #artist-navigation, .js-artist-bio, .js-no-events").hide();
