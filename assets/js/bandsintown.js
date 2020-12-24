@@ -41,7 +41,6 @@ function searchBandsInTown(artistInput) {
             event.append("<td class='td'>" + moment(data.datetime).format('MM/DD/YY') + "</td>" );
             event.append("<td class='td'>" + data.venue.name + "</td>");
             event.append("<td class='td'>" + data.venue.city + ", " + data.venue.country +"</td>" );
-            // event.append('<td><a href="'+ data.offers[0].url+'" target="_blank" class="btn btn-sm btn-primary btn-block">Book</a></td>');
             event.append('<td><a href="" target="_blank" class="btn btn-sm btn-primary btn-block">Save</a></td>');
             $(".event").append(event);
           }
