@@ -1,13 +1,13 @@
 // $(document).ready(function() {
 
     // when document ready, hide most of the div and show some div
-    $("#bandsintown, #youtube, #social, #instagram, #recentSearch, #artist-navigation, #spotify, .js-artist-bio, .js-no-events").hide();
+    $("#bandsintown, #recentSearch, #artist-navigation, .js-artist-bio, .js-no-events").hide();
 
     // when the search button executed, run searchBandsInTown function, show most of the div and hide some div
     $("#searchButton").on("click", function(event) {
       event.preventDefault();
 
-      $("#bandsintown, #youtube, #social, #instagram, #recentSearch, #artist-navigation, #spotify").show();
+      $("#bandsintown, #recentSearch, #artist-navigation").show();
       
       var artistInput = $("#search").val().trim();
       $("#feature-carousel").hide();
