@@ -3,6 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Music Event</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header id="header--site" class="header--site" data-spy="affix" data-offset-top="110">
+        <nav class="navbar navbar-default">
+          <div class="container">
+    
+            <form class="search--site navbar-form navbar-left">
+              <div class="form-group clearfix">
+                <input type="text" class="form-control input-lg" placeholder="Search Artist" id="search" val="">
+              <button type="submit" class="btn btn-primary btn-lg text-uppercase" id="searchButton">Search</button>
+              </div>
+            </form>
+    
+          </div><!-- /.container-fluid -->
+        </nav><!-- /.navbar -->
+    
+        <nav id="artist__navigation" class="navbar navbar-inverse navbar-subnav">
+          <div class="container">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#bandsintown" class="smooth-scroll">Events</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    <!-- /.carousel-inner -->
+ 
+     
+    <!-- page-header artist-profile -->
+      <div id="bandsintown">
+        <div class="container">
+          <div class="js-no-artist alert alert-danger"><h1 class="text-uppercase text-center h3">No Artist Found!!!</h1></div><!-- /.js-no-artist -->
+            <div class="row js-artist-info">
+            <div class="col-sm-3">
+              <div class="artist-profile">
+                <div class="page-header">
+                  <h1 class="js-artist-name text-uppercase"></h1>
+                </div>
+                <p><img class="js-artist-image img-responsive img-thumbnail" src=""></p>
+                <p><a class="js-read-more btn btn-block btn-primary text-uppercase" href="#">About the Artist</a></p>
+              </div>
+            </div>
+    
+            <div class="col-sm-9">
+              <div class="page-header">
+                <h1 class="text-uppercase">Upcoming Events</h1>
+              </div>
+    
+              <div class="js-no-events alert alert-danger"><h3 class="text-uppercase text-center">No Upcoming Events!!!</h3></div>
+    
+              <div class="table-responsive">
+                <table class="table table-striped event-table js-event-table">
+                  <thead>
+                    <tr>
+                      <th class="th">Date</th>
+                      <th class="th">Venue</th>
+                      <th class="th">Location</th>
+                      <th class="th">Tickets</th>
+                    </tr>
+                  </thead>
+                  <tbody class="event"></tbody>
+                </table>
+              </div>
+    
+            </div>
+          </div>
+          <div class="js-artist-bio artist-bio"></div>
+        </div>
+      </div>
+
     <title>Project1</title>
 </head>
 <body>
