@@ -35,10 +35,10 @@ function searchBandsInTown(artistInput) {
     url: queryEvent,
     method: "GET",
     error: function () {
-      // $(".js-no-artist").show();
-      noArtistFound.show();
-      // $(".js-artist-info").hide();
-      aritstInfo.hide();// works up until this point
+      $(".js-no-artist").show();
+      // noArtistFound.show();
+      $(".js-artist-info").hide();
+      // aritstInfo.hide();// works up until this point
       // $("#recentSearch, #artist-navigation").hide();
     },
     success: function (response) {
@@ -48,10 +48,10 @@ function searchBandsInTown(artistInput) {
     
 
       if (!response.length) {
-        // $(".js-no-events").show();
-        noEvents.show();
-        // $(".js-event-table").hide();
-        eventTable.hide();
+        $(".js-no-events").show();
+        // noEvents.show();
+        $(".js-event-table").hide();
+        // eventTable.hide();
       } else {
         $(".js-event-table").show();
         // eventTable.show();
