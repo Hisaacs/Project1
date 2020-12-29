@@ -1,5 +1,4 @@
 
-  
 // when document ready, hide most of the div and show some div
 const hideDiv = document.getElementById("bandsintown", "recentSearch", "artist-navigation", ".js-artist-bio", ".js-no-events", ".js-read-more");
 hideDiv.style.visibility = "hidden";
@@ -41,7 +40,5 @@ show.addEventListener('click', function (e) {
 });
 
 
-
- 
 
  
