@@ -72,6 +72,3 @@ function searchArtist (artistPrompt) {
 
 
 }
-
-// run WIKIPEDIA API to get more info about the artist
-  
