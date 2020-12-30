@@ -1,72 +1,68 @@
-//Working_Code
-// function searchBandsInTown start for search the artist including all the information
 
+
+//Variable declaration by grabbing class
 const artistName = document.querySelector(".js-artist-name");
 const artistImage = document.querySelector(".js-artist-image");
-const  noArtistFound = document.querySelector(".js-no-artist");
-const aritstInfo = document.querySelector(".js-artist-info");
 
-const noEvents = document.querySelector(".js-no-events");
-const eventTable = document.querySelector(".js-event-table");
-const eventInfo = document.querySelector(".event");
-
+// function searchBandsInTown start for search the artist including all the information
 function searchBandsInTown(artistInput) {
 
-  const queryArtist = 'https://rest.bandsintown.com/artists/' + artistInput + '?app_id=bandsintown';
-  const queryEvent = 'https://rest.bandsintown.com/artists/' + artistInput + '/events?app_id=bandsintown';
+  const queryArtistUrl = 'https://rest.bandsintown.com/artists/' + artistInput + '?app_id=bandsintown';
+  const queryEventUrl = 'https://rest.bandsintown.com/artists/' + artistInput + '/events?app_id=bandsintown';
 
 
-  // run bandsintown API to get the info
+  // run bandsintown API to get the artist info
   $.ajax({
-    url: queryArtist,
+    url: queryArtistUrl,
     method: "GET",
     success: function (response) {
-      // $('.js-artist-name').html(response.name);
       artistName.innerHTML = response.name;
-      // $('.js-artist-image').attr('src', response.thumb_url);
       artistImage.setAttribute("src", response.thumb_url);
       // console.log(response);
-
     }
   });
 
-  // run bandsintown API to get the events
+  // run bandsintown API to get the events info
   $.ajax({
-    url: queryEvent,
+    url: queryEventUrl,
     method: "GET",
     error: function () {
-      $(".js-no-artist").show();
-      // noArtistFound.show();
-      $(".js-artist-info").hide();
-      // aritstInfo.hide();// works up until this point
-      // $("#recentSearch, #artist-navigation").hide();
+      const noArtistFound = document.querySelector(".js-no-artist");
+      noArtistFound.style.display = "block";
+      const aritstInfo = document.querySelector(".js-artist-info");
+      aritstInfo.style.display = "none";
     },
     success: function (response) {
-
-      $(".js-no-artist").hide();
-      $(".js-artist-info").show();
-    
+      const noArtist = document.querySelector(".js-no-artist");
+      noArtist.style.display = "none";
+      const artistInfo = document.querySelector(".js-artist-info");
+      artistInfo.style.display = "block";
 
       if (!response.length) {
-        $(".js-no-events").show();
-        // noEvents.show();
-        $(".js-event-table").hide();
-        // eventTable.hide();
+        const noEvents = document.querySelector(".js-no-events");
+        noEvents.style.display = "block";
+
+        const eventTable = document.querySelector(".js-event-table");
+        eventTable.style.display = "none";
+       
       } else {
-        $(".js-event-table").show();
-        // eventTable.show();
-        $(".js-no-events").hide();
-        $(".event").empty();
+        const tableEvent = document.querySelector(".js-event-table");
+        tableEvent.style.display = "block";
+        const eventNull = document.querySelector(".js-no-events");
+        eventNull.style.display = "none";
+        const eventInfo = document.querySelector(".event");
+        eventInfo.innerHTML = " ";
+        //$(".event").empty();
         //  eventInfo.empty();
         // Loop through results
         $.each(response, function (i, data) {
           if (i <= 10) {
-            let event = $("<tr>");
-            event.append("<td class='td'>" + moment(data.datetime).format('MM/DD/YY') + "</td>");
-            event.append("<td class='td'>" + data.venue.name + "</td>");
-            event.append("<td class='td'>" + data.venue.city + ", " + data.venue.country + "</td>");
-            event.append('<td class="btn btn-sm btn-primary btn-block">Save</a></td>');
-            $(".event").append(event);
+            let eventDetails = $("<tr>");
+            eventDetails.append("<td class='td'>" + moment(data.datetime).format('MM/DD/YY') + "</td>");
+            eventDetails.append("<td class='td'>" + data.venue.name + "</td>");
+            eventDetails.append("<td class='td'>" + data.venue.city + ", " + data.venue.country + "</td>");
+            eventDetails.append('<td class="btn btn-sm btn-primary btn-block">Save</a></td>');
+            $(".event").append(eventDetails);
           }
         });
       }
@@ -87,7 +83,7 @@ function searchBandsInTown(artistInput) {
     headers: {
       'Api-User-Agent': 'CBC'
     },
-    error: function () {},
+   
     success: function (data) {
       let markup = data.parse.text["*"];
       let i = $('<div>').html(markup);
@@ -105,7 +101,9 @@ function searchBandsInTown(artistInput) {
       if (article === unavailable) {
         $('.js-artist-bio').html("Sorry, we are unable to find the article.")
       }
-    }
+    },
+    error: function () {}
+
   });
 
 
