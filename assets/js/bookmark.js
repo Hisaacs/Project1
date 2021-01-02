@@ -1,8 +1,4 @@
 
-    function myFormSearch(name) {
-        document.getElementById("myForm").submit();
-    }
-
     function item(id, time, name, city) {
         return `
         <tr>
@@ -18,11 +14,11 @@
         localStorage.setItem("bookmarkItems", "[]");
     }
 
-    var oldStorage = JSON.parse(localStorage.getItem("bookmarkItems"));
+    let oldStorage = JSON.parse(localStorage.getItem("bookmarkItems"));
 
-    var htmlRender = ``;
+    let htmlRender = ``;
 
-    for (var i in oldStorage) {
+    for (let i in oldStorage) {
         htmlRender += item(i, oldStorage[i][0], oldStorage[i][1], oldStorage[i][2])
     }
 
