@@ -94,3 +94,16 @@ body {
     color: #fff;
     
   }
+
+  .modal-content{
+    width: 600px;
+    height:300px;
+    top: 5%;
+  }
+ 
+  .title{
+    padding:50px;
+    text-align:center;
+    margin-top:80px;
+ 
+  }
