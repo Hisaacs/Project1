@@ -85,3 +85,12 @@ body {
     background-color: #530084;
   }
   
+  /* Added a bookmark */
+  .bookmark {
+    position: absolute;
+    bottom: 15px;
+    margin-left: 1500px;
+    font-size: 2rem;
+    color: #fff;
+    
+  }
