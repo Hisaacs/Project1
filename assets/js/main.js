@@ -1,3 +1,29 @@
+////search modal
+const modalBg = document.querySelector(".modal-background");
+const modal = document.querySelector(".modal");
+const closeBtn = document.querySelector(".modal-close");
+
+
+
+document.getElementById("myForm").addEventListener("submit", function(event){
+  event.preventDefault();
+  const artistPro = document.getElementById("search").value.trim();
+  if (artistPro === ""){
+    
+    const hideSection = document.querySelector(".js-no-artist",".js-no-events",".js-event-table" );
+    hideSection.style.visibility = "hidden";
+
+    modal.classList.add('is-active');
+   
+
+  } 
+});
+
+closeBtn.addEventListener('click', () =>{
+  window.location.replace("./event.html");
+});
+
+
 // when document ready, hide most of the div and show some div
 const hideDiv = document.getElementById("bandsintown", "recentSearch", "artist-navigation", ".js-artist-bio", ".js-no-events", ".js-read-more");
 hideDiv.style.visibility = "hidden";
