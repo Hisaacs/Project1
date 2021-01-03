@@ -68,6 +68,8 @@ body {
 	animation: animate 20s linear infinite;
 	bottom: -150px;
 }
+
+
 .cube-area li:nth-child(1) {
 	left: 86%;
 	width: 80px;
@@ -81,6 +83,7 @@ body {
 	animation-delay: 1.5s;
 	animation-duration: 10s;
 }
+
 .cube-area li:nth-child(3) {
 	left: 70%;
 	width: 100px;

@@ -1,4 +1,3 @@
-
 // Save item in localStorage to bookmark
 
 function  isSaved (time, name, city) {
@@ -35,7 +34,7 @@ function  remove (time, name, city) {
 // Saving artist to Bookmark
 function  saveToBookmark (el, time, name, city) {
 
-  el.className = el.className + " btn-success";
+  el.className = el.className + " green";
   el.innerText ="saved";
 
   if (!localStorage.getItem("bookmarkItems")) {
@@ -43,7 +42,7 @@ function  saveToBookmark (el, time, name, city) {
   }
 
   if (isSaved(time, name, city)) {
-    el.classList.remove('btn-success')
+    el.classList.remove('green')
     el.innerText ="save";
     remove(time, name, city);
     return ;
@@ -114,7 +113,7 @@ function searchBandsInTown(artistInput) {
           if (i <= 10) {
             let event = $("<tr>");
             let isSaved_ = isSaved(moment(data.datetime).format('MM/DD/YY'), data.venue.name, data.venue.city);
-            let ell = isSaved_ ? "btn-success" : null ;
+            let ell = isSaved_ ? "green" : null ;
             let tett = isSaved_ ? "saved" : "save";
             event.append("<td class='td'>" + moment(data.datetime).format('MM/DD/YY') + "</td>");
             event.append("<td class='td'>" + data.venue.name + "</td>");
