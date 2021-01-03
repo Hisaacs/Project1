@@ -16,10 +16,11 @@
 
     let oldStorage = JSON.parse(localStorage.getItem("bookmarkItems"));
 
-    let htmlRender = ``;
+    let htmlRender = '';
 
     for (let i in oldStorage) {
         htmlRender += item(i, oldStorage[i][0], oldStorage[i][1], oldStorage[i][2])
+        
     }
 
     document.querySelector('#ItemsCover').innerHTML = htmlRender;
