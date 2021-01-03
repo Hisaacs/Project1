@@ -1,3 +1,60 @@
+
+// Save item in localStorage to bookmark
+
+function  isSaved (time, name, city) {
+  if (!localStorage.getItem("bookmarkItems")) {
+    localStorage.setItem("bookmarkItems", "[]");
+  }
+ 
+  let oldStorage = JSON.parse(localStorage.getItem("bookmarkItems"));
+  let found = false;
+
+  for(let i in oldStorage) {
+    if (time == oldStorage[i][0] && name == oldStorage[i][1] && city == oldStorage[i][2])  {
+      found = true;
+      break;
+    }
+  }
+  return found;
+
+}
+// Removing item from localStorage Bookmark
+function  remove (time, name, city) {
+  if (!localStorage.getItem("bookmarkItems")) {
+    localStorage.setItem("bookmarkItems", "[]");
+  }
+  let oldStorage = JSON.parse(localStorage.getItem("bookmarkItems"));
+
+  for(let i in oldStorage) {
+    if (time == oldStorage[i][0] && name == oldStorage[i][1] && city == oldStorage[i][2])  {
+      oldStorage.splice(i, 1);
+      localStorage.setItem("bookmarkItems", JSON.stringify(oldStorage));
+    }
+  }
+}
+// Saving artist to Bookmark
+function  saveToBookmark (el, time, name, city) {
+
+  el.className = el.className + " btn-success";
+  el.innerText ="saved";
+
+  if (!localStorage.getItem("bookmarkItems")) {
+    localStorage.setItem("bookmarkItems", "[]");
+  }
+
+  if (isSaved(time, name, city)) {
+    el.classList.remove('btn-success')
+    el.innerText ="save";
+    remove(time, name, city);
+    return ;
+  }
+
+  let oldStorage = JSON.parse(localStorage.getItem("bookmarkItems"));
+  oldStorage.push([time, name, city]);
+  localStorage.setItem("bookmarkItems", JSON.stringify(oldStorage));
+  console.log(time, name, city);
+}
+
 //Variable declaration by grabbing class
 const artistName = document.querySelector(".js-artist-name");
 const artistImage = document.querySelector(".js-artist-image");
@@ -57,12 +114,12 @@ function searchBandsInTown(artistInput) {
           if (i <= 10) {
             let event = $("<tr>");
             let isSaved_ = isSaved(moment(data.datetime).format('MM/DD/YY'), data.venue.name, data.venue.city);
-           
+            let ell = isSaved_ ? "btn-success" : null ;
             let tett = isSaved_ ? "saved" : "save";
-                event.append("<td class='td'>" + moment(data.datetime).format('MM/DD/YY') + "</td>");
+            event.append("<td class='td'>" + moment(data.datetime).format('MM/DD/YY') + "</td>");
             event.append("<td class='td'>" + data.venue.name + "</td>");
             event.append("<td class='td'>" + data.venue.city + ", " + data.venue.country + "</td>");
-            event.append('<td class="btn btn-sm btn-primary btn-block" onclick="saveToBookmark(this,'
+            event.append('<td class="btn btn-sm btn-primary btn-block  ' + ell +' " onclick="saveToBookmark(this,'
                 + "'"+ moment(data.datetime).format('MM/DD/YY') +"'"+
                 ","+ "'"+ data.venue.name  +"'"+
                 ","+ "'"+ data.venue.city +"'"+')">' + tett + '</a></td>');
@@ -110,62 +167,3 @@ function searchBandsInTown(artistInput) {
     }
   });
 }
-
-
-// Save item in localStorage to bookmark
-function  isSaved (time, name, city) {
-
-  if (!localStorage.getItem("bookmarkItems")) {
-    localStorage.setItem("bookmarkItems", "[]");
-  }
- 
-  let oldStorage = JSON.parse(localStorage.getItem("bookmarkItems"));
-  let found = false;
-
-  for(let i in oldStorage) {
-    if (time == oldStorage[i][0] && name == oldStorage[i][1] && city == oldStorage[i][2])  {
-      found = true;
-      break;
-    }
-  }
-  return found;
-}
-
-// Saving artist to Bookmark
-function  saveToBookmark (el, time, name, city) {
-
-  el.innerText ="saved";
-
-  if (!localStorage.getItem("bookmarkItems")) {
-    localStorage.setItem("bookmarkItems", "[]");
-  }
-
-  if (isSaved(time, name, city)) {
-    el.innerText ="save";
-    remove(time, name, city);
-    return ;
-  }
-
-  let oldStorage = JSON.parse(localStorage.getItem("bookmarkItems"));
-  oldStorage.push([time, name, city]);
-  localStorage.setItem("bookmarkItems", JSON.stringify(oldStorage));
-  console.log(time, name, city);
-}
-
-// Removing item from localStorage Bookmark
-function  remove (time, name, city) {
-
-  if (!localStorage.getItem("bookmarkItems")) {
-    localStorage.setItem("bookmarkItems", "[]");
-  }
-
-  let oldStorage = JSON.parse(localStorage.getItem("bookmarkItems"));
-
-  for(let i in oldStorage) {
-    if (time == oldStorage[i][0] && name == oldStorage[i][1] && city == oldStorage[i][2])  {
-      oldStorage.splice(i, 1);
-      localStorage.setItem("bookmarkItems", JSON.stringify(oldStorage));
-    }
-  }
-}
-
