@@ -118,7 +118,7 @@ function searchBandsInTown(artistInput) {
             event.append("<td class='td'>" + moment(data.datetime).format('MM/DD/YY') + "</td>");
             event.append("<td class='td'>" + data.venue.name + "</td>");
             event.append("<td class='td'>" + data.venue.city + ", " + data.venue.country + "</td>");
-            event.append('<td class="btn btn-sm btn-primary btn-block  ' + ell +' " onclick="saveToBookmark(this,'
+            event.append('<td class="btn btn-sm btn-save btn-primary btn-block  ' + ell +' " onclick="saveToBookmark(this,'
                 + "'"+ moment(data.datetime).format('MM/DD/YY') +"'"+
                 ","+ "'"+ data.venue.name  +"'"+
                 ","+ "'"+ data.venue.city +"'"+')">' + tett + '</a></td>');
