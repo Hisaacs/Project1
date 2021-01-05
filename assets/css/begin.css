@@ -2,7 +2,8 @@
 * {
 	margin: 0;
 	padding: 0;
-}
+} 
+/* choosing the font family style for the body of the html page */
 body {
 	font-family:'open sans',Arial, Helvetica, sans-serif;
 }
@@ -13,18 +14,19 @@ body {
 	position: absolute;
 	z-index: 1;
 }
+
 .navbar-text ul {
 	height: 50px;
     float: right;
     font-weight: bold;
-}
+} 
+
 .navbar-text ul li {
 	display: inline-block;
 	padding:15px;
 	color: #fff;
-    font-size: 20px;
-    
-}
+    font-size: 20px; 
+} 
 .navbar-text ul li:hover {
 	cursor: pointer;
 }
