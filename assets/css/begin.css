@@ -1,3 +1,4 @@
+/* Removing default margin &padding providing universal selector to zero*/
 * {
 	margin: 0;
 	padding: 0;
@@ -5,6 +6,8 @@
 body {
 	font-family:'open sans',Arial, Helvetica, sans-serif;
 }
+
+/*navbar div styling starts here */
 .navbar-text {
 	width: 100%;
 	position: absolute;
@@ -35,18 +38,36 @@ body {
 
 .event-heading {
 	font-weight: bold;
-	margin-bottom: 150px;
-    
+	margin-bottom: 150px;   
 }
+img {
+	border: 1px solid #ddd; /* Gray border */
+	border-radius: 4px;  /* Rounded border */
+	padding: 5px; /* Some padding */
+	width: 260px; /* Set a small width */
+  }
+/*button*/
+
+.start-button {
+   color:white;
+    font-weight: bold;
+    font-size:30px;
+	border-radius: 12px;     
+	padding:25px;  
+	background-color:#ffae42; 
+	border-color: #ffae42;
+}
+.start-button:hover{
+	background-color:rgba(252,142,142,1)
+}
+
+/* animation area starts here */
 
 .animation-area {
     background: rgb(0,212,212);
     background: linear-gradient(90deg, rgba(0,212,212,0.8295693277310925) 0%, rgba(40,131,98,1) 100%);
     background: rgb(252,218,142);
     background: linear-gradient(90deg, rgba(252,218,142,1) 0%, rgba(252,142,142,1) 100%);
-    /*background: linear-gradient(90deg, rgba(40,131,125,0.9051995798319328) 0%, rgba(0,255,201,1) 100%);*/
-    /*background:linear-gradient(90deg, rgba(40,131,125,0.9051995798319328) 0%, rgba(255,0,5,0.6502976190476191) 100%);*/
-    /*background: linear-gradient(90deg, rgba(40,131,98,1) 18%, rgba(0,255,239,1) 100%);*/
 	width: 100%;
 	height: 100vh;
 }
@@ -68,6 +89,7 @@ body {
 	animation: animate 20s linear infinite;
 	bottom: -150px;
 }
+
 
 
 .cube-area li:nth-child(1) {
@@ -109,34 +131,8 @@ body {
 	height: 110px;
 	animation-delay: 3.5s;
 }
-.pure-button {
-	color:white;
-	font-weight: bold;
-	font-size:30px;
-	background-color:#ffae42; 
-	border-color: #ffae42;
-	padding: 20px;
-	width:23%;
-}
-.start-button {
-   color:white;
-    font-weight: bold;
-    font-size:30px;
-	border-radius: 12px;     
-	padding:25px;  
-	background-color:#ffae42; 
-	border-color: #ffae42;
-}
-.start-button:hover{
-	background-color:rgba(252,142,142,1)
-}
 
-img {
-	border: 1px solid #ddd; /* Gray border */
-	border-radius: 4px;  /* Rounded border */
-	padding: 5px; /* Some padding */
-	width: 260px; /* Set a small width */
-  }
+
 @keyframes animate {
 	0% {
 		transform: translateY(0) rotate(0deg);

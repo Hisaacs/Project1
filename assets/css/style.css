@@ -110,6 +110,73 @@ body {
 
 .modal-content{
   width: 600px;
-  height:300px;
-  top: 5%;
+  height:400px;
+  
 }
+.modal-overlay {
+  background: grey!important;
+
+}
+
+.hidden { 
+  display: none;
+}
+.carousel-image{
+  /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#shakira{
+  background-image: url(../img/img1.png);
+}
+#coldplay{
+  background-image: url(../img/img4.png);
+
+}
+#u2{
+  background-image: url(../img/img3.png);
+  
+}
+#drake{
+  background-image: url(../img/img2.png);
+}
+
+#chevron-left{
+  font-size: 50px;
+  position: absolute;
+  top: 39%;
+  left: 15%;
+  z-index: 2;
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  color: white;
+  cursor: pointer;
+  background-color: rgb(123 123 123 / 80%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#chevron-right {
+    font-size: 50px;
+    position: absolute;
+    top: 39%;
+  border-radius: 50%;
+    right: 15%;
+    z-index: 2;
+    width: 72px;
+    height: 72px;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(123 123 123 / 80%);
+    background-color: rgb(123 123 123 / 80%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-save{
+  width:90px;
+}
+
