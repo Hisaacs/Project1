@@ -1,102 +1,101 @@
-
-////search modal
-const modalBg = document.querySelector(".modal-background");
-const modal = document.querySelector(".modal");
-const closeBtn = document.querySelector(".modal-close");
-
-
-document.getElementById("myForm").addEventListener("submit", function(event){
-  event.preventDefault();
-  const artistPro = document.getElementById("search").value.trim();
-  if (artistPro === ""){
-    
-    const hideSection = document.querySelector(".js-no-artist",".js-no-events",".js-event-table" );
-    hideSection.style.visibility = "hidden";
-
-    modal.classList.add('is-active');
-   
-
-  } 
-});
-
-closeBtn.addEventListener('click', () =>{
-  window.location.replace("./event.html");
-});
-
-// when document ready, hide most of the div and show some div
-const hideDiv = document.getElementById("bandsintown", "recentSearch", "artist-navigation", ".js-artist-bio", ".js-no-events", ".js-read-more");
+//when document ready, hide most of the div and show some div
+const hideDiv = document.getElementById("bandsintown");
 hideDiv.style.visibility = "hidden";
 
-const hideArtistDiv = document.querySelector(".js-artist-bio", ".js-no-events", ".js-read-more");
+const hideArtistDiv = document.querySelector(".js-artist-bio");
 hideArtistDiv.style.display = "none";
+
+document.getElementById("myForm").addEventListener('submit', formFunction);
+//initilaise the modal
+let elems = document.querySelectorAll('.modal');
+let instaces = M.Modal.init(elems);
 
 // when the search button executed, run searchBandsInTown function, show most of the div and hide some div
 
 function formFunction(event) {
-  console.log('dd')
-  const artistName = document.getElementById("search").value.trim();
-
-
-
-  const showDiv = document.getElementById("bandsintown", "recentSearch", "artist-navigation");
-  showDiv.style.visibility = "visible";
-
-  const artistInput = document.getElementById("search").value.trim();
-
-  const hideCarousel = document.getElementById('feature-carousel');
-  hideCarousel.style.display = "none";
-
-  document.getElementById('search').value = '';
-
-  if (!localStorage.getItem("SearchItems")) {
-
-    localStorage.setItem("SearchItems", "[]");
-
+  if ( event != null) {
+    event.preventDefault();
   }
+  
+  console.log('dd')
+  const artistName = document.getElementById("search").value;
+  
+  if (artistName === "") {
+    console.log('test');
+    instaces[0].open();
+  }
+  else {
 
+    
+    const artistName = document.getElementById("search").value.trim();
 
+    const showDiv = document.getElementById("bandsintown", "recentSearch", "artist-navigation");
+    showDiv.style.visibility = "visible";
 
-  const queryArtist = 'https://rest.bandsintown.com/artists/' + artistInput + '?app_id=bandsintown';
+    const artistInput = document.getElementById("search").value.trim();
 
-  // run bandsintown API to get the info
-  $.ajax({
-    url: queryArtist,
-    method: "GET",
-    success: function (response) {
-      // $('.js-artist-name').html(response.name);
-      artistName.innerHTML = response.name;
-      // $('.js-artist-image').attr('src', response.thumb_url);
-      artistImage.setAttribute("src", response.thumb_url);
-      // console.log(response);
+    const hideBgL = document.getElementById("chevron-left");
+    hideBgL.style.visibility = "hidden";
+    const hideBgR = document.getElementById("chevron-right");
+    hideBgR.style.visibility = "hidden";
 
-      var foundArtist = false;
-      var SearchItems = JSON.parse(localStorage.getItem("SearchItems"));
-      for (var zz in  SearchItems) {
-        if (SearchItems[zz][0] ==artistName) {
-          foundArtist =true;
-          break;
-        }
-      }
+    const hideCarousel = document.getElementById('feature-carousel');
+    hideCarousel.style.display = "none";
 
-      if(!foundArtist) {
-        SearchItems.push([artistName, response.thumb_url]);
+    document.getElementById('search').value = '';
 
-        localStorage.setItem("SearchItems", JSON.stringify(SearchItems));
+    if (!localStorage.getItem("SearchItems")) {
 
-      }
-
-      DropDownItemsFN();
+      localStorage.setItem("SearchItems", "[]");
 
     }
-  });
 
-  searchBandsInTown(artistInput);
-  // searchArtist(artistPrompt);
-  event.preventDefault();
+
+
+    const queryArtist = 'https://rest.bandsintown.com/artists/' + artistInput + '?app_id=bandsintown';
+
+    // run bandsintown API to get the info
+    $.ajax({
+      url: queryArtist,
+      method: "GET",
+      success: function (response) {
+        // $('.js-artist-name').html(response.name);
+        artistName.innerHTML = response.name;
+        // $('.js-artist-image').attr('src', response.thumb_url);
+        artistImage.setAttribute("src", response.thumb_url);
+        // console.log(response);
+
+        var foundArtist = false;
+        var SearchItems = JSON.parse(localStorage.getItem("SearchItems"));
+        for (var zz in SearchItems) {
+          if (SearchItems[zz][0] == artistName) {
+            foundArtist = true;
+            break;
+          }
+        }
+
+        if (!foundArtist) {
+
+          SearchItems.push([artistName, response.thumb_url]);
+
+          localStorage.setItem("SearchItems", JSON.stringify(SearchItems));
+
+
+        }
+
+        DropDownItemsFN();
+
+      }
+    });
+
+    searchBandsInTown(artistInput);
+    // searchArtist(artistPrompt);
+    
+  }
 };
 
 
-document.getElementById("myForm").addEventListener('submit', formFunction);
+//document.getElementById("myForm").addEventListener('submit', formFunction);
 
 
 // when read more is clicked
@@ -120,21 +119,21 @@ if (!localStorage.getItem("SearchItems")) {
   localStorage.setItem("SearchItems", "[]");
 }
 
-function  forceSearch (name) {
-   document.getElementById("search").value = name;
+function forceSearch(name) {
+  document.getElementById("search").value = name;
 
 
   formFunction()
 }
 
-function DropDownItemsFN () {
+function DropDownItemsFN() {
   var DropDownItems = JSON.parse(localStorage.getItem("SearchItems"));
 
   var htmlRenderDropDown = ``;
 
   for (var o in DropDownItems) {
 
-  htmlRenderDropDown += ` <li onclick="forceSearch('${DropDownItems[o][0]}')" style="margin: 0px !important;" class="row p-1 m-0
+    htmlRenderDropDown += ` <li onclick="forceSearch('${DropDownItems[o][0]}')" style="margin: 0px !important;" class="row p-1 m-0
  ">
  <a onclick="forceSearch('${DropDownItems[o][0]}')">
  
