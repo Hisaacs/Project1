@@ -1,16 +1,19 @@
+/* The body is positioned according to the normal flow of the document */
 body {
   position: relative;
 }
+/* The navigation bar has a background color of black */
 .site-header {
-  background: #000 !important;
+  background: #000 !important; /* The !important rule overides any color property */
 }
+/*Holds the structure of the main nav bar */
 .site-header.affix {
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
   background-color: rgba( 0, 0, 0, .90 );
-}
+} 
 .navbar {
   border-radius: 0;
   margin-bottom: 0;
