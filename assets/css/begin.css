@@ -7,20 +7,17 @@
 body {
 	font-family:'open sans',Arial, Helvetica, sans-serif;
 }
-
 /*navbar div styling starts here */
-.navbar-text {
+navbar-text {
 	width: 100%;
 	position: absolute;
 	z-index: 1;
 }
-
 .navbar-text ul {
 	height: 50px;
     float: right;
     font-weight: bold;
 } 
-
 .navbar-text ul li {
 	display: inline-block;
 	padding:15px;
@@ -36,8 +33,6 @@ body {
 	font-size: 50px;
 	margin-top: 5%;
 }
-
-
 .event-heading {
 	font-weight: bold;
 	margin-bottom: 150px;   
@@ -65,7 +60,6 @@ img {
 }
 
 /* animation area starts here */
-
 .animation-area {
     background: rgb(0,212,212);
     background: linear-gradient(90deg, rgba(0,212,212,0.8295693277310925) 0%, rgba(40,131,98,1) 100%);
@@ -140,7 +134,7 @@ img {
 }
 
 /* Changes to the animation */
-@keyframes animate {
+@keyframes animate { /*@keyframes controls the intermediate steps in the animation sequence */
 
 	0% { /* 0% is the beginning of the animation */
 		/*The transform function represents a transformation that afects the cubes appearance */
