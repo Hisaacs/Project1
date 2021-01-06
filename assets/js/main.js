@@ -1,62 +1,18 @@
-<<<<<<< HEAD
-
-// when document ready, hide most of the div and show some div
-const hideDiv = document.getElementById("bandsintown", "recentSearch", "artist-navigation", ".js-artist-bio", ".js-no-events", ".js-read-more");
-=======
 //when document ready, hide most of the div and show some div
 const hideDiv = document.getElementById("bandsintown");
->>>>>>> master
 hideDiv.style.visibility = "hidden";
 
 const hideArtistDiv = document.querySelector(".js-artist-bio");
 hideArtistDiv.style.display = "none";
 
-<<<<<<< HEAD
-
-// modal goes here
-document.getElementById("myForm").addEventListener('submit', formFunction);
-let elems = document.querySelectorAll('.modal');
-let instances = M.Modal.init(elems);
-
-=======
 document.getElementById("myForm").addEventListener('submit', formFunction);
 //initilaise the modal
 let elems = document.querySelectorAll('.modal');
 let instaces = M.Modal.init(elems);
->>>>>>> master
 
 // when the search button executed, run searchBandsInTown function, show most of the div and hide some div
 
 function formFunction(event) {
-<<<<<<< HEAD
-  // console.log('dd')
-  if(event != null) {
-    event.preventDefault();
-  }
-
-  const artistName = document.getElementById("search").value.trim();
-  if (artistName === "") {
-    instances[0].open();
-  } else {
-
-    const showDiv = document.getElementById("bandsintown", "recentSearch", "artist-navigation");
-    showDiv.style.visibility = "visible";
-
-    const artistInput = document.getElementById("search").value.trim();
-
-    const hideCarousel = document.getElementById('feature-carousel');
-    hideCarousel.style.display = "none";
-
-    document.getElementById('search').value = '';
-
-    if (!localStorage.getItem("SearchItems")) {
-
-      localStorage.setItem("SearchItems", "[]");
-
-    }
-
-
-=======
   if ( event != null) {
     event.preventDefault();
   }
@@ -93,7 +49,6 @@ function formFunction(event) {
       localStorage.setItem("SearchItems", "[]");
 
     }
->>>>>>> master
 
     const queryArtist = 'https://rest.bandsintown.com/artists/' + artistInput + '?app_id=bandsintown';
 
@@ -108,31 +63,6 @@ function formFunction(event) {
         artistImage.setAttribute("src", response.thumb_url);
         // console.log(response);
 
-<<<<<<< HEAD
-        var foundArtist = false;
-        var SearchItems = JSON.parse(localStorage.getItem("SearchItems"));
-        for (var zz in SearchItems) {
-          if (SearchItems[zz][0] == artistName) {
-            foundArtist = true;
-            break;
-          }
-        }
-
-        if (!foundArtist) {
-          SearchItems.push([artistName, response.thumb_url]);
-
-          localStorage.setItem("SearchItems", JSON.stringify(SearchItems));
-
-        }
-
-        DropDownItemsFN();
-
-      }
-    });
-
-    searchBandsInTown(artistInput);
-
-=======
     const queryArtist = 'https://rest.bandsintown.com/artists/' + artistInput + '?app_id=bandsintown';
 
     // run bandsintown API to get the info
@@ -172,17 +102,13 @@ function formFunction(event) {
     searchBandsInTown(artistInput);
     // searchArtist(artistPrompt);
     
->>>>>>> master
   }
 };
 
 
-<<<<<<< HEAD
-=======
 //document.getElementById("myForm").addEventListener('submit', formFunction);
 
 
->>>>>>> master
 // when read more is clicked
 const show = document.querySelector('.js-read-more');
 const sideToggle = document.querySelector('.js-artist-bio');

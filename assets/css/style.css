@@ -146,7 +146,6 @@ body {
 
 .modal-content{
   width: 600px;
-<<<<<<< HEAD
   height:300px;
   top: 5%;
 }
@@ -159,10 +158,11 @@ body {
 
 .progress {
   margin-top: 50%;
-}
-=======
+} 
+ =======
   height:400px;
   
+}
 }
 /*set background colour : grey*/
 .modal-overlay {
@@ -233,4 +233,3 @@ body {
   width:90px;
 }
 
->>>>>>> master
