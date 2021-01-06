@@ -48,8 +48,7 @@ img {
 	padding: 5px; /* Some padding */
 	width: 260px; /* Set a small width */
   }
-/*button*/
-
+/*the begin button which when clicked opens up the Musical Event Planner page*/
 .start-button {
    color:white;
     font-weight: bold;
@@ -59,6 +58,8 @@ img {
 	background-color:#ffae42; 
 	border-color: #ffae42;
 }
+
+/*when user puts the mouse over the begin button it turns orange */
 .start-button:hover{
 	background-color:rgba(252,142,142,1)
 }
@@ -73,6 +74,7 @@ img {
 	width: 100%;
 	height: 100vh;
 }
+/* The design for the cube animations in the background */
 .cube-area {
 	position: absolute;
 	top: 0;
@@ -80,7 +82,8 @@ img {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-}
+} 
+/* The movement of the cubes from bottom to the top of the page */
 .cube-area li {
 	position: absolute;
 	display: block;
@@ -90,9 +93,7 @@ img {
 	background: rgba(255, 255, 255,0.3);
 	animation: animate 20s linear infinite;
 	bottom: -150px;
-}
-
-
+} 
 
 .cube-area li:nth-child(1) {
 	left: 86%;
