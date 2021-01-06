@@ -1,10 +1,13 @@
+/* Removing default margin &padding providing universal selector to zero*/
 * {
 	margin: 0;
 	padding: 0;
 }
+/* choosing the font family style for the body of the html page */
 body {
 	font-family:'open sans',Arial, Helvetica, sans-serif;
 }
+/* Nav bar styling starts here */
 .navbar-text {
 	width: 100%;
 	position: absolute;
@@ -19,8 +22,7 @@ body {
 	display: inline-block;
 	padding:15px;
 	color: #fff;
-    font-size: 20px;
-    
+    font-size: 20px;  
 }
 .navbar-text ul li:hover {
 	cursor: pointer;
@@ -32,24 +34,21 @@ body {
 	margin-top: 5%;
 }
 
-
+/* Styling of the header*/
 .event-heading {
 	font-weight: bold;
 	margin-bottom: 150px;
-    
 }
-
+/* animation area starts here */
 .animation-area {
     background: rgb(0,212,212);
     background: linear-gradient(90deg, rgba(0,212,212,0.8295693277310925) 0%, rgba(40,131,98,1) 100%);
     background: rgb(252,218,142);
     background: linear-gradient(90deg, rgba(252,218,142,1) 0%, rgba(252,142,142,1) 100%);
-    /*background: linear-gradient(90deg, rgba(40,131,125,0.9051995798319328) 0%, rgba(0,255,201,1) 100%);*/
-    /*background:linear-gradient(90deg, rgba(40,131,125,0.9051995798319328) 0%, rgba(255,0,5,0.6502976190476191) 100%);*/
-    /*background: linear-gradient(90deg, rgba(40,131,98,1) 18%, rgba(0,255,239,1) 100%);*/
 	width: 100%;
 	height: 100vh;
 }
+/* The design for the cube animations in the background */
 .cube-area {
 	position: absolute;
 	top: 0;
@@ -58,6 +57,7 @@ body {
 	height: 100%;
 	overflow: hidden;
 }
+/* The movement of the cubes from bottom to the top of the page */
 .cube-area li {
 	position: absolute;
 	display: block;
@@ -68,14 +68,14 @@ body {
 	animation: animate 20s linear infinite;
 	bottom: -150px;
 }
-
-
+/* Animation for the 1st cube child  in the position of cube siblings*/
 .cube-area li:nth-child(1) {
 	left: 86%;
 	width: 80px;
 	height: 80px;
 	animation-delay: 0s;
 }
+/* Animation for the 2nd cube child the position of cube siblings */
 .cube-area li:nth-child(2) {
 	left: 12%;
 	width: 30px;
@@ -83,13 +83,14 @@ body {
 	animation-delay: 1.5s;
 	animation-duration: 10s;
 }
-
+/* Animation for the 3rd cube child the position of cube siblings */
 .cube-area li:nth-child(3) {
 	left: 70%;
 	width: 100px;
 	height: 100px;
 	animation-delay: 5.5s;
 }
+/* Animation for the 4th cube child the position of cube siblings */
 .cube-area li:nth-child(4) {
 	left: 42%;
 	width: 150px;
@@ -97,12 +98,14 @@ body {
 	animation-delay: 0s;
 	animation-duration: 15s;
 }
+/* Animation for the 5th cube child the position of cube siblings */
 .cube-area li:nth-child(5) {
 	left: 65%;
 	width: 40px;
 	height: 40px;
 	animation-delay: 0s;
 }
+/* Animation for the 6th cube child the position of cube siblings */
 .cube-area li:nth-child(6) {
 	left: 15%;
 	width: 110px;
@@ -118,6 +121,7 @@ body {
 	padding: 20px;
 	width:23%;
 }
+/*The begin button which when clicked opens up the Musical Event Planner page*/
 .start-button {
    color:white;
     font-weight: bold;
@@ -127,21 +131,30 @@ body {
 	background-color:#ffae42; 
 	border-color: #ffae42;
 }
+/*When user puts the mouse over the begin button it turns orange */
 .start-button:hover{
 	background-color:rgba(252,142,142,1)
 }
 
+/*Styling the image */
 img {
-	border: 1px solid #ddd; /* Gray border */
-	border-radius: 4px;  /* Rounded border */
-	padding: 5px; /* Some padding */
-	width: 260px; /* Set a small width */
+	border: 1px solid #ddd; 
+	border-radius: 4px;  
+	padding: 5px; 
+	width: 260px; 
   }
+  /* Changes to the animation 
+   0% is the beginning of the animation 
+  The transform function represents a transformation that afects the cubes appearance 
+  The translateY() function repositions an element vertically on the 2D plane
+  The opacity protery specifies the transparency of the cubes*/
 @keyframes animate {
 	0% {
 		transform: translateY(0) rotate(0deg);
 		opacity: 1;
 	}
+	/* 100% is when the animation is complete 
+	Animation transformation of the cube */
 	100% {
 		transform: translateY(-800px) rotate(360deg);
 		opacity: 0;
