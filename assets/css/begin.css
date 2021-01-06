@@ -94,13 +94,14 @@ img {
 	animation: animate 20s linear infinite;
 	bottom: -150px;
 } 
-
+/* Animation for the 1st cube child  in the position of cube siblings*/
 .cube-area li:nth-child(1) {
 	left: 86%;
 	width: 80px;
 	height: 80px;
 	animation-delay: 0s;
-}
+} 
+/* Animation for the 2nd cube child the position of cube siblings */
 .cube-area li:nth-child(2) {
 	left: 12%;
 	width: 30px;
@@ -108,13 +109,14 @@ img {
 	animation-delay: 1.5s;
 	animation-duration: 10s;
 }
-
+/* Animation for the 3rd cube child the position of cube siblings */
 .cube-area li:nth-child(3) {
 	left: 70%;
 	width: 100px;
 	height: 100px;
 	animation-delay: 5.5s;
 }
+/* Animation for the 4th cube child the position of cube siblings */
 .cube-area li:nth-child(4) {
 	left: 42%;
 	width: 150px;
@@ -122,12 +124,14 @@ img {
 	animation-delay: 0s;
 	animation-duration: 15s;
 }
+/* Animation for the 5th cube child the position of cube siblings */
 .cube-area li:nth-child(5) {
 	left: 65%;
 	width: 40px;
 	height: 40px;
 	animation-delay: 0s;
 }
+/* Animation for the 6th cube child the position of cube siblings */
 .cube-area li:nth-child(6) {
 	left: 15%;
 	width: 110px;
@@ -135,14 +139,18 @@ img {
 	animation-delay: 3.5s;
 }
 
-
+/* Changes to the animation */
 @keyframes animate {
-	0% {
-		transform: translateY(0) rotate(0deg);
-		opacity: 1;
+
+	0% { /* 0% is the beginning of the animation */
+		/*The transform function represents a transformation that afects the cubes appearance */
+		transform: translateY(0) rotate(0deg); /* The translateY() function repositions an element vertically on the 2D plane*/
+		opacity: 1; /* The opacity protery specifies the transparency of the cubes*/
 	}
-	100% {
-		transform: translateY(-800px) rotate(360deg);
+
+	100% { /* 100% is when the animation is complete */
+		/* Animation transformation of the cube */
+		transform: translateY(-800px) rotate(360deg); 
 		opacity: 0;
 	}
 }
