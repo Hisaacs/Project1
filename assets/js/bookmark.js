@@ -1,7 +1,7 @@
 function item(id, time, name, city) {
     return `
     <tr>
-    <th scope="row">${id}</th>
+    <th scope="row">${+id+1}</th>
     <td>${name}</td>
     <td>${city}</td>
     <td>${time}</td>

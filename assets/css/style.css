@@ -1,9 +1,23 @@
+
+/*Postion: relative to using the orignal postion of elements*/
 body {
   position: relative;
 }
-.site-header {
-  background: #000 !important;
+/* set colour : #000 */
+
+/* The body is positioned according to the normal flow of the document */
+body {
+  position: relative;
 }
+/* The navigation bar has a background color of black */
+
+.site-header {
+  background: #000 !important; /* The !important rule overides any color property */
+}
+
+/* Make it enable to scroll */
+
+
 .site-header.affix {
   top: 0;
   left: 0;
@@ -11,6 +25,9 @@ body {
   z-index: 100;
   background-color: rgba( 0, 0, 0, .90 );
 }
+
+/* Navbar for attractive layout */
+
 .navbar {
   border-radius: 0;
   margin-bottom: 0;
@@ -29,31 +46,41 @@ body {
   height: auto;
   width: 200px;
 }
+ /*add media fluid to make it responsive*/
+
 .media-fluid {
 	width: 100%;
 	height: auto;
 	display: block;
 }
+/*Site serach form */
 
 .site-search .form-group {
   display: block;
   padding: 20px;
 }
 
+/* search and submit buttons*/
 
 .site-search input[type="text"],
 .site-search button[type="submit"] {
   float: left;
 }
+/*Input for search button */
+
 .site-search input[type="text"] {
   width: 100%;
   padding-right: 30%;
   background: #3a3a3a;
   border-color: #333131;
 }
+/*Set colour for input: #fff */
+
 .site-search input[type="text"]:focus {
   color: #fff;
 }
+/*Set colour for search button: #fff */
+
 .site-search button[type="submit"] {
   color: #fff;
   font-weight: bold;
@@ -66,11 +93,14 @@ body {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
+/* Border colour when hover : #25075E; Background colour when select button: #530084 */
+
 .site-search button[type="submit"]:hover,
 .site-search button[type="submit"]:focus {
   border-color: #25075E;
   background-color: #530084;
 }
+/* Bookmark search history */
 
 .addToFavorites {
   position: absolute;
@@ -79,17 +109,21 @@ body {
   margin-left:380px;
   color: black;
 }
+/*Remove searched event history */
+
 .removeFavorites {
   position: absolute;
   top: 25px;
   margin-left: 380px;
   color: black;
 }
+/*add carousel */
 
 .carousel-image  {
   width: 600px !important;
   height: 600px!important;
 }
+/*alert classes*/
 
 .alert-danger {
   color: #a94442;
@@ -104,12 +138,15 @@ body {
 .alert-danger .alert-link {
   color: #843534
 }
+/*Searched artist history*/
 .HistorySearch {
   width: 200px !important;
 }
+/*add modal to pop up a message when artist no found*/
 
 .modal-content{
   width: 600px;
+<<<<<<< HEAD
   height:300px;
   top: 5%;
 }
@@ -123,3 +160,77 @@ body {
 .progress {
   margin-top: 50%;
 }
+=======
+  height:400px;
+  
+}
+/*set background colour : grey*/
+.modal-overlay {
+  background: grey!important;
+
+}
+
+.hidden { 
+  display: none;
+}
+.carousel-image{
+  /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#shakira{
+  background-image: url(../img/img1.png);
+}
+#coldplay{
+  background-image: url(../img/img4.png);
+
+}
+#u2{
+  background-image: url(../img/img3.png);
+  
+}
+#drake{
+  background-image: url(../img/img2.png);
+}
+/*Add Chevron to the carousel to scroll left to right */
+#chevron-left{
+  font-size: 50px;
+  position: absolute;
+  top: 39%;
+  left: 15%;
+  z-index: 2;
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  color: white;
+  cursor: pointer;
+  background-color: rgb(123 123 123 / 80%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Add Chevron to the carousel to scroll right to left */
+
+#chevron-right {
+    font-size: 50px;
+    position: absolute;
+    top: 39%;
+  border-radius: 50%;
+    right: 15%;
+    z-index: 2;
+    width: 72px;
+    height: 72px;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(123 123 123 / 80%);
+    background-color: rgb(123 123 123 / 80%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-save{
+  width:90px;
+}
+
+>>>>>>> master

@@ -44,9 +44,6 @@ body {
     background: linear-gradient(90deg, rgba(0,212,212,0.8295693277310925) 0%, rgba(40,131,98,1) 100%);
     background: rgb(252,218,142);
     background: linear-gradient(90deg, rgba(252,218,142,1) 0%, rgba(252,142,142,1) 100%);
-    /*background: linear-gradient(90deg, rgba(40,131,125,0.9051995798319328) 0%, rgba(0,255,201,1) 100%);*/
-    /*background:linear-gradient(90deg, rgba(40,131,125,0.9051995798319328) 0%, rgba(255,0,5,0.6502976190476191) 100%);*/
-    /*background: linear-gradient(90deg, rgba(40,131,98,1) 18%, rgba(0,255,239,1) 100%);*/
 	width: 100%;
 	height: 100vh;
 }

@@ -2,21 +2,35 @@
 <html>
 
 <head>
-    <title>I Love Music</title>
+    <title>Musical Event Planner</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
 
 
+=======
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!--Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+>>>>>>> master
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<<<<<<< HEAD
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"> -->
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
+=======
+    
+</head>
+
+<body>
+    <!--header begns here-->
+>>>>>>> master
     <header id="site-header" class="site-header" data-spy="affix" data-offset-top="110">
         <nav class="navbar navbar-default row">
             <div class="container">
@@ -24,14 +38,27 @@
                 <form id="myForm" class="site-search navbar-form navbar-left">
                     <div class="form-group clearfix row">
                         <input type="text" class="form-control input-lg" placeholder="Search Artist" id="search" val="">
+<<<<<<< HEAD
                         <button type="submit" class="btn btn-primary btn-lg text-uppercase" id="searchButton">Submit
+=======
+                        <button type="submit"
+                            class="btn btn-primary btn-lg text-uppercase modal-trigger" id="searchButton">Submit
+>>>>>>> master
                         </button>
 
                     </div>
                 </form>
-
+<<<<<<< HEAD
+=======
+                
+>>>>>>> master
 
             </div><!-- /.container-fluid -->
+
+<<<<<<< HEAD
+            </div><!-- /.container-fluid -->
+=======
+>>>>>>> master
 
         </nav><!-- /.navbar -->
 
@@ -41,7 +68,11 @@ z-index: 1;right: 3%;width: 200px!important;" class='dropdown-trigger btn' href=
 
         <!-- Dropdown Structure -->
         <ul id='HistorySearch' style="" class='dropdown-content'>
+<<<<<<< HEAD
             <li><a href="#!">nothing</a></li>
+=======
+            <li><a href="#!">No History</a></li>
+>>>>>>> master
         </ul>
         <script !src="">
             $('.dropdown-trigger').dropdown();
@@ -50,12 +81,18 @@ z-index: 1;right: 3%;width: 200px!important;" class='dropdown-trigger btn' href=
         <nav id="artist-navigation" class="navbar navbar-inverse navbar-subnav">
             <div class="container">
                 <ul class="nav navbar-nav">
+<<<<<<< HEAD
                     <li class="active"><a href="#bandsintown" class="smooth-scroll">Events</a></li>
                     <li class="active"><a href="bookmark.html" class="smooth-scroll">History</a></li>
+=======
+                    <li class="active"><a href="index.html" class="smooth-scroll">Log Out</a></li>
+                    <li class="active"><a href="bookmark.html" class="smooth-scroll">My Events</a></li>
+>>>>>>> master
                 </ul>
             </div>
 
         </nav>
+<<<<<<< HEAD
     </header>
 
     <!-- Loader -->
@@ -115,6 +152,51 @@ z-index: 1;right: 3%;width: 200px!important;" class='dropdown-trigger btn' href=
                     </div>
                 </div>
 
+=======
+    </header>)
+
+
+    <div id="chevron-left"> <i class="fas fa-chevron-left"></i> </div>
+    <div id="chevron-right"> <i class="fas fa-chevron-right"></i>  </div>
+
+    <!-- /.carousel-inner -->
+    <div id="feature-carousel" class="carousel" style="margin-top: 50px" data-ride="carousel">
+
+        <div class="carousel-item carousel-image" id="shakira"></div>
+        <div class="carousel-item carousel-image" id="drake"></div>
+        <div class="carousel-item carousel-image" id="u2"></div>
+        <div class="carousel-item carousel-image" id="coldplay"></div>
+
+    </div>
+
+    <script>
+        $('.carousel').carousel();
+    </script>
+
+    <!-- page-header artist-profile -->
+    <div id="bandsintown">
+        <div class="container">
+            <div class="js-no-artist alert alert-danger hidden">
+                <h1 class="text-uppercase text-center h3">No Artist Found!!!</h1>
+            </div><!-- /.js-no-artist -->
+
+            <!-- TODO: add loading soon <div class="hidden">Loading...</div> -->
+
+            <div class="row js-artist-info">
+                <div class="col s12 m12 l12 xl4">
+                    <div class="artist-profile">
+                        <div class="page-header">
+                            <h1 class="js-artist-name text-uppercase"></h1>
+                        </div>
+                        <p><img class="js-artist-image img-responsive img-thumbnail"></p>
+
+                        <p><a class="js-read-more btn btn-block btn-primary text-uppercase" href="#">About the
+                                Artist</a>
+                        </p>
+                    </div>
+                </div>
+
+>>>>>>> master
                 <div class="col s12 m12 l12 xl8">
                     <div class="page-header">
                         <h1 class="text-uppercase">Upcoming Events</h1>
@@ -151,6 +233,7 @@ z-index: 1;right: 3%;width: 200px!important;" class='dropdown-trigger btn' href=
             </div>
 
         </div>
+<<<<<<< HEAD
     </div>
 
     <!-- modal-->
@@ -177,6 +260,36 @@ z-index: 1;right: 3%;width: 200px!important;" class='dropdown-trigger btn' href=
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script type="text/javascript" src="assets/js/carousel.js"></script>
     <script type="text/javascript" src="assets/js/loader.js"></script>
+=======
+    </div>
+
+ <!--Modal goes here-->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Please Enter the Artist Name</h4>
+        </div>
+        <div class="modal-footer">
+            <a href="./event.html" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- JavaScript -->
+
+    <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js" type="text/javascript"></script>
+
+
+    <!-- Local JavaScript file -->
+    <script type="text/javascript" src="assets/js/bands.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script src="assets/js/carousel.js"></script>
+    <!-- <script type="text/javascript" src="assets/js/search.js"></script> -->
+
+>>>>>>> master
 
 </body>
 
