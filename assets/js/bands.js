@@ -1,15 +1,15 @@
 // Save item in localStorage to bookmark
 
-function  isSaved (time, name, city) {
+function isSaved(time, name, city) {
   if (!localStorage.getItem("bookmarkItems")) {
     localStorage.setItem("bookmarkItems", "[]");
   }
- 
+
   let oldStorage = JSON.parse(localStorage.getItem("bookmarkItems"));
   let found = false;
 
-  for(let i in oldStorage) {
-    if (time == oldStorage[i][0] && name == oldStorage[i][1] && city == oldStorage[i][2])  {
+  for (let i in oldStorage) {
+    if (time == oldStorage[i][0] && name == oldStorage[i][1] && city == oldStorage[i][2]) {
       found = true;
       break;
     }
@@ -18,24 +18,24 @@ function  isSaved (time, name, city) {
 
 }
 // Removing item from localStorage Bookmark
-function  remove (time, name, city) {
+function remove(time, name, city) {
   if (!localStorage.getItem("bookmarkItems")) {
     localStorage.setItem("bookmarkItems", "[]");
   }
   let oldStorage = JSON.parse(localStorage.getItem("bookmarkItems"));
 
-  for(let i in oldStorage) {
-    if (time == oldStorage[i][0] && name == oldStorage[i][1] && city == oldStorage[i][2])  {
+  for (let i in oldStorage) {
+    if (time == oldStorage[i][0] && name == oldStorage[i][1] && city == oldStorage[i][2]) {
       oldStorage.splice(i, 1);
       localStorage.setItem("bookmarkItems", JSON.stringify(oldStorage));
     }
   }
 }
 // Saving artist to Bookmark
-function  saveToBookmark (el, time, name, city) {
+function saveToBookmark(el, time, name, city) {
 
   el.className = el.className + " green";
-  el.innerText ="saved";
+  el.innerText = "saved";
 
   if (!localStorage.getItem("bookmarkItems")) {
     localStorage.setItem("bookmarkItems", "[]");
@@ -43,9 +43,9 @@ function  saveToBookmark (el, time, name, city) {
 
   if (isSaved(time, name, city)) {
     el.classList.remove('green')
-    el.innerText ="save";
+    el.innerText = "save";
     remove(time, name, city);
-    return ;
+    return;
   }
 
   let oldStorage = JSON.parse(localStorage.getItem("bookmarkItems"));
@@ -98,7 +98,7 @@ function searchBandsInTown(artistInput) {
 
         const eventTable = document.querySelector(".js-event-table");
         eventTable.style.display = "none";
-       
+
       } else {
         const tableEvent = document.querySelector(".js-event-table");
         tableEvent.style.display = "block";
@@ -108,25 +108,25 @@ function searchBandsInTown(artistInput) {
         eventInfo.innerHTML = " ";
 
         // Loop through results
-        
+
         $.each(response, function (i, data) {
           if (i <= 10) {
             let event = $("<tr>");
             let isSaved_ = isSaved(moment(data.datetime).format('MM/DD/YY'), data.venue.name, data.venue.city);
-            let ell = isSaved_ ? "green" : null ;
+            let ell = isSaved_ ? "green" : null;
             let tett = isSaved_ ? "saved" : "save";
             event.append("<td class='td'>" + moment(data.datetime).format('MM/DD/YY') + "</td>");
             event.append("<td class='td'>" + data.venue.name + "</td>");
             event.append("<td class='td'>" + data.venue.city + ", " + data.venue.country + "</td>");
-            event.append('<td class="btn btn-sm btn-save btn-primary btn-block  ' + ell +' " onclick="saveToBookmark(this,'
-                + "'"+ moment(data.datetime).format('MM/DD/YY') +"'"+
-                ","+ "'"+ data.venue.name  +"'"+
-                ","+ "'"+ data.venue.city +"'"+')">' + tett + '</a></td>');
+            event.append('<td class="btn btn-sm btn-save btn-primary btn-block  ' + ell + ' " onclick="saveToBookmark(this,'
+              + "'" + moment(data.datetime).format('MM/DD/YY') + "'" +
+              "," + "'" + data.venue.name + "'" +
+              "," + "'" + data.venue.city + "'" + ')">' + tett + '</a></td>');
             $(".event").append(event);
           }
         });
 
-        }
+      }
     }
   });
 
@@ -142,10 +142,8 @@ function searchBandsInTown(artistInput) {
       section: 0,
     },
     dataType: 'jsonp',
-    headers: {
-      'Api-User-Agent': 'CBC'
-    },
-    error: function () {},
+
+    error: function () { },
     success: function (data) {
       let markup = data.parse.text["*"];
       let i = $('<div>').html(markup);
