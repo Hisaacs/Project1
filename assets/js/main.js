@@ -50,7 +50,18 @@ function formFunction(event) {
 
     }
 
+    const queryArtist = 'https://rest.bandsintown.com/artists/' + artistInput + '?app_id=bandsintown';
 
+    // run bandsintown API to get the info
+    $.ajax({
+      url: queryArtist,
+      method: "GET",
+      success: function (response) {
+        // $('.js-artist-name').html(response.name);
+        artistName.innerHTML = response.name;
+        // $('.js-artist-image').attr('src', response.thumb_url);
+        artistImage.setAttribute("src", response.thumb_url);
+        // console.log(response);
 
     const queryArtist = 'https://rest.bandsintown.com/artists/' + artistInput + '?app_id=bandsintown';
 
@@ -152,4 +163,3 @@ function DropDownItemsFN() {
 }
 
 DropDownItemsFN();
-

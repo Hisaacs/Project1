@@ -146,8 +146,23 @@ body {
 
 .modal-content{
   width: 600px;
+  height:300px;
+  top: 5%;
+}
+
+.hidden {
+  display: none;
+}
+
+/* This will set the margin of loader */
+
+.progress {
+  margin-top: 50%;
+} 
+ =======
   height:400px;
   
+}
 }
 /*set background colour : grey*/
 .modal-overlay {

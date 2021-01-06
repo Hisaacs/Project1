@@ -18,7 +18,7 @@ let oldStorage = JSON.parse(localStorage.getItem("bookmarkItems"));
 let htmlRender = '';
 
 for (let i in oldStorage) {
-    htmlRender += item(i, oldStorage[i][0], oldStorage[i][1], oldStorage[i][2])
+    htmlRender += item(i, oldStorage[i][0], oldStorage[i][1], oldStorage[i][2],i++)
     
 }
 
