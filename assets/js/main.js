@@ -112,9 +112,6 @@ function formFunction(event) {
 };
 
 
-//document.getElementById("myForm").addEventListener('submit', formFunction);
-
-
 // when read more is clicked
 const show = document.querySelector('.js-read-more');
 const sideToggle = document.querySelector('.js-artist-bio');
