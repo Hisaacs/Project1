@@ -16,8 +16,6 @@ body {
 }
 
 /* Make it enable to scroll */
-
-
 .site-header.affix {
   top: 0;
   left: 0;
@@ -27,7 +25,6 @@ body {
 }
 
 /* Navbar for attractive layout */
-
 .navbar {
   border-radius: 0;
   margin-bottom: 0;

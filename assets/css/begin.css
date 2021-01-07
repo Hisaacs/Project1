@@ -106,15 +106,7 @@ body {
 	height: 110px;
 	animation-delay: 3.5s;
 }
-.pure-button {
-	color:white;
-	font-weight: bold;
-	font-size:30px;
-	background-color:#ffae42; 
-	border-color: #ffae42;
-	padding: 20px;
-	width:23%;
-}
+ 
 .start-button {
    color:white;
     font-weight: bold;
