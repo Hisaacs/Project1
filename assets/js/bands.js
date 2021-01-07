@@ -54,7 +54,7 @@ function saveToBookmark(el, time, name, city) {
   console.log(time, name, city);
 }
 
-//Variable declaration by grabbing class
+//Variable declaration by grabbing classes
 const artistName = document.querySelector(".js-artist-name");
 const artistImage = document.querySelector(".js-artist-image");
 

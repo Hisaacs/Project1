@@ -3,13 +3,13 @@
 body {
   position: relative;
 }
-/* set colour : #000 */
+
 
 /* The body is positioned according to the normal flow of the document */
 body {
   position: relative;
 }
-/* The navigation bar has a background color of black */
+/* navigation background color*/
 
 .site-header {
   background: #000 !important; /* The !important rule overides any color property */
