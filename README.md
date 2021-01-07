@@ -4,6 +4,10 @@
 Searchable application that allow user to enter an artist name, find about the artist, save 
 any upcoming events globally. 
 
+# Deploy link
+Music Event Planner app: https://hisaacs.github.io/Project1/ <br  />
+Music Event Planner git repo: https://github.com/Hisaacs/Project1  <br  />
+
 # User Story
 ```
 As a user I want to search for an artist and have the artist displayed in User Interface.
