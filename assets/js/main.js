@@ -106,7 +106,7 @@ function formFunction(event) {
     });
 
     searchBandsInTown(artistInput);
-    // searchArtist(artistPrompt);
+    /
     
   }
 };
@@ -167,6 +167,6 @@ function DropDownItemsFN() {
   }
 
 }
-
+//calls the drop down fucntion
 DropDownItemsFN();
 

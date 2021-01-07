@@ -9,7 +9,7 @@ hideChevBgR.style.visibility = "hidden";
 
 const hideFeatureCarousel = document.getElementById('feature-carousel');
 hideFeatureCarousel.style.display = "none";
-
+//This section will make carousel and chevron div visible
 setTimeout(function () {
     document.querySelector('.div1').classList.remove('progress');
     document.querySelector('.div2').classList.remove('indeterminate');
