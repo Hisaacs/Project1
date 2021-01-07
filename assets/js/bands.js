@@ -150,9 +150,6 @@ function searchBandsInTown(artistInput) {
       i.find('a').each(function () {
         $(this).replaceWith($(this).html());
       });
-      // i.find('sup').remove();
-      // i.find('.mw-ext-cite-error').remove();
-
       $('.js-artist-bio').html($(i).find('p'));
 
       let article = $('.js-artist-bio').html();
