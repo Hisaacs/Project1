@@ -1,5 +1,4 @@
-
-   // const carousel = $('.carousel').carousel();
+//Carousel previous and next function 
 const elem = document.querySelector('.carousel');
 const instance = M.Carousel.getInstance(elem);
 

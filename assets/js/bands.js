@@ -1,4 +1,4 @@
-// Save item in localStorage to bookmark
+// Save item in localStorage to bookmarks
 
 function isSaved(time, name, city) {
   if (!localStorage.getItem("bookmarkItems")) {
@@ -17,7 +17,7 @@ function isSaved(time, name, city) {
   return found;
 
 }
-// Removing item from localStorage Bookmark
+// Removing item from localStorage Bookmarks
 function remove(time, name, city) {
   if (!localStorage.getItem("bookmarkItems")) {
     localStorage.setItem("bookmarkItems", "[]");
@@ -31,7 +31,7 @@ function remove(time, name, city) {
     }
   }
 }
-// Saving artist to Bookmark
+// Saving artist to Bookmarks
 function saveToBookmark(el, time, name, city) {
 
   el.className = el.className + " green";

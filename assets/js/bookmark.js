@@ -1,3 +1,4 @@
+//fucntion for retrieving artist using local storage get 
 function item(id, time, name, city) {
     return `
     <tr>

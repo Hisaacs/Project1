@@ -1,4 +1,4 @@
-//when document ready, hide most of the div and show some div
+//when document is ready, hide most of the div and show some div
 const hideDiv = document.getElementById("bandsintown");
 hideDiv.style.visibility = "hidden";
 
