@@ -1,4 +1,4 @@
-// Save item in localStorage to bookmarks
+// Save item in localStorage to bookmark
 
 function isSaved(time, name, city) {
   if (!localStorage.getItem("bookmarkItems")) {
@@ -17,7 +17,7 @@ function isSaved(time, name, city) {
   return found;
 
 }
-// Removing item from localStorage Bookmarks
+// Removing item from localStorage Bookmark
 function remove(time, name, city) {
   if (!localStorage.getItem("bookmarkItems")) {
     localStorage.setItem("bookmarkItems", "[]");
@@ -31,7 +31,7 @@ function remove(time, name, city) {
     }
   }
 }
-// Saving artist to Bookmarks
+// Saving artist to Bookmark
 function saveToBookmark(el, time, name, city) {
 
   el.className = el.className + " green";
@@ -54,7 +54,7 @@ function saveToBookmark(el, time, name, city) {
   console.log(time, name, city);
 }
 
-//Variable declaration by grabbing classes
+//Variable declaration by grabbing class
 const artistName = document.querySelector(".js-artist-name");
 const artistImage = document.querySelector(".js-artist-image");
 

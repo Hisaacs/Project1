@@ -1,4 +1,4 @@
-//when document is ready most of the div are hidden only showing few
+//when document ready, hide most of the div and show some div
 const hideDiv = document.getElementById("bandsintown");
 hideDiv.style.visibility = "hidden";
 
@@ -50,18 +50,7 @@ function formFunction(event) {
 
     }
 
-    const queryArtist = 'https://rest.bandsintown.com/artists/' + artistInput + '?app_id=bandsintown';
 
-    // run bandsintown API to get the info
-    $.ajax({
-      url: queryArtist,
-      method: "GET",
-      success: function (response) {
-        // $('.js-artist-name').html(response.name);
-        artistName.innerHTML = response.name;
-        // $('.js-artist-image').attr('src', response.thumb_url);
-        artistImage.setAttribute("src", response.thumb_url);
-        // console.log(response);
 
     const queryArtist = 'https://rest.bandsintown.com/artists/' + artistInput + '?app_id=bandsintown';
 
@@ -163,3 +152,4 @@ function DropDownItemsFN() {
 }
 
 DropDownItemsFN();
+
