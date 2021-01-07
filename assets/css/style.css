@@ -60,7 +60,7 @@ body {
   color: #fff;
   font-weight: bold;
   width: 30%;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-left: -51%;
   text-transform: uppercase;
   border-color: #333131;
@@ -185,14 +185,4 @@ body {
 .progress {
   margin-top: 50%;
   
-}
-
-@media (min-width: 480px) {
-  .site-search{
-    margin-top: -10px;
-  }
-
-  nav ul a{
-    margin-top:-5px;
-  }
 }
