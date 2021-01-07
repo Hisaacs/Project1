@@ -95,7 +95,7 @@ function formFunction(event) {
 
           if (!foundArtist) {
               console.log('add empty artist')
-              SearchItems.push([artistName, '/assets/img/user.png']);
+              SearchItems.push([artistName, './assets/img/user.png']);
 
               localStorage.setItem("SearchItems", JSON.stringify(SearchItems));
 
