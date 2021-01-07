@@ -1,3 +1,4 @@
+/*Removing default nargin & padding providing universal selector to zerp */
 * {
 	margin: 0;
 	padding: 0;
@@ -5,6 +6,7 @@
 body {
 	font-family:'open sans',Arial, Helvetica, sans-serif;
 }
+/*navbar div styling starts here*/
 .navbar-text {
 	width: 100%;
 	position: absolute;
@@ -38,7 +40,27 @@ body {
 	margin-bottom: 150px;
     
 }
-
+/*button */
+.start-button {
+	color:white;
+	 font-weight: bold;
+	 font-size:30px;
+	 border-radius: 12px;     
+	 padding:25px;  
+	 background-color:#ffae42; 
+	 border-color: #ffae42;
+ }
+ .start-button:hover{
+	 background-color:rgba(252,142,142,1)
+ }
+ 
+ img {
+	 border: 1px solid #ddd; /* Gray border */
+	 border-radius: 4px;  /* Rounded border */
+	 padding: 5px; /* Some padding */
+	 width: 260px; /* Set a small width */
+   }
+/*animation area starts here*/
 .animation-area {
     background: rgb(0,212,212);
     background: linear-gradient(90deg, rgba(0,212,212,0.8295693277310925) 0%, rgba(40,131,98,1) 100%);
@@ -107,25 +129,7 @@ body {
 	animation-delay: 3.5s;
 }
  
-.start-button {
-   color:white;
-    font-weight: bold;
-    font-size:30px;
-	border-radius: 12px;     
-	padding:25px;  
-	background-color:#ffae42; 
-	border-color: #ffae42;
-}
-.start-button:hover{
-	background-color:rgba(252,142,142,1)
-}
 
-img {
-	border: 1px solid #ddd; /* Gray border */
-	border-radius: 4px;  /* Rounded border */
-	padding: 5px; /* Some padding */
-	width: 260px; /* Set a small width */
-  }
 @keyframes animate {
 	0% {
 		transform: translateY(0) rotate(0deg);

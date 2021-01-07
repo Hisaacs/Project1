@@ -1,3 +1,4 @@
+//carousel function for moving the image left to right
 const elem = document.querySelector('.carousel');
 const instance = M.Carousel.getInstance(elem);
 
