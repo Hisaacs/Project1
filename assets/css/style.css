@@ -44,12 +44,14 @@ body {
 .site-search input[type="text"],
 .site-search button[type="submit"] {
   float: left;
+  
 }
 .site-search input[type="text"] {
-  width: 100%;
+  width: 80%;
   padding-right: 30%;
   background: #3a3a3a;
   border-color: #333131;
+  
 }
 .site-search input[type="text"]:focus {
   color: #fff;
@@ -59,7 +61,7 @@ body {
   font-weight: bold;
   width: 30%;
   margin-top: 10px;
-  margin-left: -30%;
+  margin-left: -51%;
   text-transform: uppercase;
   border-color: #333131;
   background-color: #fa0707;
@@ -183,4 +185,14 @@ body {
 .progress {
   margin-top: 50%;
   
+}
+
+@media (min-width: 480px) {
+  .site-search{
+    margin-top: -10px;
+  }
+
+  nav ul a{
+    margin-top:-5px;
+  }
 }
