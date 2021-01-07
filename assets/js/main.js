@@ -59,9 +59,8 @@ function formFunction(event) {
       url: queryArtist,
       method: "GET",
       success: function (response) {
-        // $('.js-artist-name').html(response.name);
+        if(response) {
         artistName.innerHTML = response.name;
-        // $('.js-artist-image').attr('src', response.thumb_url);
         artistImage.setAttribute("src", response.thumb_url);
         // console.log(response);
 
@@ -77,15 +76,33 @@ function formFunction(event) {
         if (!foundArtist) {
 
           SearchItems.push([artistName, response.thumb_url]);
-
           localStorage.setItem("SearchItems", JSON.stringify(SearchItems));
 
-
         }
-
+      
         DropDownItemsFN();
+      } else {
+          console.log("can't found the artist")
 
-      }
+          var foundArtist = false;
+          var SearchItems = JSON.parse(localStorage.getItem("SearchItems"));
+          for (var zz in SearchItems) {
+              if (SearchItems[zz][0] == artistName) {
+                  foundArtist = true;
+                  break;
+              }
+          }
+
+          if (!foundArtist) {
+              console.log('add empty artist')
+              SearchItems.push([artistName, '/assets/img/user.png']);
+
+              localStorage.setItem("SearchItems", JSON.stringify(SearchItems));
+
+          }
+          DropDownItemsFN();
+      } 
+    }
     });
 
     searchBandsInTown(artistInput);
