@@ -11,12 +11,12 @@ body {
   z-index: 100;
   background-color: rgba( 0, 0, 0, .90 );
 }
-.navbar {
+/* .navbar {
   border-radius: 0;
   margin-bottom: 0;
   min-height: auto;
   border: none;
-}
+} */
 .navbar-default {
   border-bottom-color: #D2D6DF;
   background: none;
@@ -37,18 +37,21 @@ body {
 
 .site-search .form-group {
   display: block;
-  padding: 20px;
+  padding: 10px;
 }
 
 
 .site-search input[type="text"],
 .site-search button[type="submit"] {
   float: left;
+
+  top:10px;
   
 }
 .site-search input[type="text"] {
   width: 80%;
   padding-right: 30%;
+  
   background: #3a3a3a;
   border-color: #333131;
   
@@ -185,4 +188,15 @@ body {
 .progress {
   margin-top: 50%;
   
+}
+
+.dropdown-trigger {
+  position: absolute;
+  margin-top: 10px;
+  z-index: 1;right: 4px;
+  width: 150px!important;
+}
+
+.btn-sm {
+  width:65px;
 }
