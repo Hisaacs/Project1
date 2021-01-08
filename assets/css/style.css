@@ -46,12 +46,11 @@ body {
 .site-search input[type="text"],
 .site-search button[type="submit"] {
   float: left;
-
   top:10px;
   
 }
 .site-search input[type="text"] {
-  width: 80%;
+  width: 70%;
   padding-right: 25%;
   
   background: #3a3a3a;
