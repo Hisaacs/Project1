@@ -11,12 +11,7 @@ body {
   z-index: 100;
   background-color: rgba( 0, 0, 0, .90 );
 }
-/* .navbar {
-  border-radius: 0;
-  margin-bottom: 0;
-  min-height: auto;
-  border: none;
-} */
+
 .navbar-default {
   border-bottom-color: #D2D6DF;
   background: none;
