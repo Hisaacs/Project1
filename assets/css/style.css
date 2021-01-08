@@ -45,7 +45,7 @@ body {
 }
 .site-search input[type="text"] {
   width: 80%;
-  padding-right: 30%;
+  padding-right: 25%;
   
   background: #3a3a3a;
   border-color: #333131;
@@ -75,7 +75,7 @@ body {
 .addToFavorites {
   position: absolute;
   top:5px;
-  padding: 1re;
+  padding: 1rem;
   margin-left:380px;
   color: black;
 }
@@ -194,4 +194,8 @@ body {
 
 .btn-sm {
   width:65px;
+}
+
+.smooth-scroll {
+
 }
