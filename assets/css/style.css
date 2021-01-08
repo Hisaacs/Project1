@@ -188,6 +188,7 @@ body {
 .dropdown-trigger {
   position: absolute;
   margin-top: 10px;
+  margin-right: 2%;
   z-index: 1;right: 4px;
   width: 150px!important;
 }
@@ -196,6 +197,3 @@ body {
   width:65px;
 }
 
-.smooth-scroll {
-
-}
