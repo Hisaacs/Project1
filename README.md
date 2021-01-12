@@ -4,9 +4,17 @@
 Searchable application that allow user to enter an artist name, find about the artist, save 
 any upcoming events globally. 
 
+# Technology Used
+* HTML 5
+* ES6
+* CSS
+* API's
+* Visual Studio Code
+* GitHub
+
 # Deploy link
-Music Event Planner app: https://hisaacs.github.io/Project1/ <br  />
-Music Event Planner git repo: https://github.com/Hisaacs/Project1  <br  />
+Music Event Planner app: https://alishapanday.github.io/Project1/ <br  />
+Music Event Planner git repo: https://github.com/AlishaPanday/Project1 <br  />
 
 # User Story
 ```
@@ -61,6 +69,20 @@ https://drive.google.com/file/d/1oqLamGRly3k1eum_3tNwRJyycAkwwMea/view
 ![Artist History](https://user-images.githubusercontent.com/72904217/103853565-5b0b4780-50e9-11eb-848d-0ae5a7f2ab5c.PNG)
 
 ![Saved Events](https://user-images.githubusercontent.com/72904217/103853568-5e9ece80-50e9-11eb-9e65-9b4249360f2e.PNG)
+
+# Authors
+
+Alisha Panday - GitHub: https://github.com/AlishaPanday  <br  />
+Hamish Issac  - GitHub: https://github.com/Hisaacs <br  />
+Herve Melvina - GitHub: https://github.com/Herve8 <br  />
+Renu Bala     - GitHub: https://github.com/Renu2026 <br  />
+
+# License
+Can be used as utility app to find for the events. <br  />
+Don't use for commercial Purpose.  <br  />
+Don't claim as your own. <br  />
+
+
 
 
 
