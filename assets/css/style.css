@@ -31,9 +31,29 @@ body {
   height: auto;
   width: 200px;
 }
+
 nav ul a {
   margin-bottom: -5px;
+  margin-right:20px;
 }
+
+nav ul a {
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    font-size: 1rem;
+    color: #fff;
+    display: block;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.navbar-nav {
+position: relative;
+margin-top: 2px;
+margin-right: 3%;
+z-index: 1;left: 4px;
+}
+
 .media-fluid {
 	width: 100%;
 	height: auto;
@@ -50,15 +70,15 @@ nav ul a {
 .site-search button[type="submit"] {
   float: left;
   top:10px;
-  
+
 }
 .site-search input[type="text"] {
   width: 60%;
   padding-right: 25%;
-  
+
   background: #3a3a3a;
   border-color: #333131;
-  
+
 }
 .site-search input[type="text"]:focus {
   color: #fff;
@@ -78,7 +98,7 @@ nav ul a {
 .site-search button[type="submit"]:hover,
 .site-search button[type="submit"]:focus {
   border-color: #25075E;
-  background-color: #530084;
+  background-color: #f6647c;
 }
 
 .addToFavorites {
@@ -120,14 +140,14 @@ nav ul a {
 .modal-content{
   width: 600px;
   height:400px;
-  
+
 }
 .modal-overlay {
   background: grey!important;
 
 }
 
-.hidden { 
+.hidden {
   display: none;
 }
 .carousel-image{
@@ -144,7 +164,7 @@ nav ul a {
 }
 #u2{
   background-image: url(../img/img3.png);
-  
+
 }
 #drake{
   background-image: url(../img/img2.png);
@@ -191,7 +211,7 @@ nav ul a {
 
 .progress {
   margin-top: 50%;
-  
+
 }
 
 .dropdown-trigger {
@@ -206,3 +226,25 @@ nav ul a {
   width:65px;
 }
 
+@media only screen and (max-width: 1280px) {
+
+.navbar-nav {
+  position: relative;
+  margin-top: 2px;
+  margin-right: 2%;
+  z-index: 1;left: 4px;
+
+}
+
+nav ul a {
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  font-size: 1rem;
+  color: #fff;
+  display: block;
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+
+}
