@@ -13,8 +13,8 @@ any upcoming events globally.
 * GitHub
 
 # Deploy link
-Music Event Planner app: https://alishapanday.github.io/Project1/ <br  />
-Music Event Planner git repo: https://github.com/AlishaPanday/Project1 <br  />
+Music Event Planner app: https://hisaacs.github.io/Project1/  <br  />
+Music Event Planner git repo: https://hisaacs.github.io/Project1/ <br  />
 
 # User Story
 ```
