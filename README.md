@@ -73,7 +73,7 @@ https://drive.google.com/file/d/1oqLamGRly3k1eum_3tNwRJyycAkwwMea/view
 # Authors
 
 Alisha Panday - GitHub: https://github.com/AlishaPanday  <br  />
-Hamish Issac  - GitHub: https://github.com/Hisaacs <br  />
+Hamish Isaacs  - GitHub: https://github.com/Hisaacs <br  />
 Herve Melvina - GitHub: https://github.com/Herve8 <br  />
 Renu Bala     - GitHub: https://github.com/Renu2026 <br  />
 
